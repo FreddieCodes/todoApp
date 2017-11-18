@@ -2,8 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Todo list</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
 </head>
 <body>
     <div id="todo-table">
@@ -13,11 +14,11 @@
         </form> 
 
         <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <% for(var i = 0; i < todos.length; i++){ %>
+            <li><%= todos[i].item %></li>
+        <% } %>
         </ul>
-    
 
+   
 </body>
 </html>
